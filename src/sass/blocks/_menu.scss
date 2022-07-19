@@ -1,0 +1,99 @@
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+    span {
+        display: block;
+        height: 3px;
+        width: 30px;
+        background-color: black;
+    }
+    span.long {
+        width: 36px;
+        height: 3px;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__block {
+        position: relative;
+        width: 345px;
+        height: 100%;
+        z-index: 4;
+        background-color: $main-color;
+        padding-top: 140px;
+        padding-left: 75px;
+        transition: all 0.6s;
+    }
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        cursor: pointer;
+    }
+    &__list {
+        list-style-type: none;
+        a {
+            font-weight: 700;
+            font-size: 24px;
+            color: #FFFFFF;
+        }
+    }
+    &__link {
+        position: relative;
+        margin-top: 18px;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 9px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 1px solid #d8f05fb9;
+        }
+        &:hover {
+            &::before {
+                transition: all 0.6s;
+                background-color: rgb(232, 223, 140);
+            }
+        }
+    }
+    &__social {
+        position: absolute;
+        bottom: 55px;
+        left: 123px;
+        a {
+            margin-right: 15px;
+        }
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: .75;
+    }
+}

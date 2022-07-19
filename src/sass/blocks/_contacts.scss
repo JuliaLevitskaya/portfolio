@@ -1,0 +1,128 @@
+.contacts {
+    padding-bottom: 91px;
+    &__wrapper {
+        padding: 0 50px 0 50px;
+        display: grid;
+        grid-template-columns: 400px 585px;
+        justify-content: space-between;
+    }
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+    &__title {
+        position: relative;
+        font-weight: 700;
+        font-size: 16px;
+        color: #000000;
+        padding: 1px 0 0 12px;
+        @include before_circle;
+        &::before {
+            top: -4px;
+            left: 2px;
+        }
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: 36px;
+        color: #000000;
+        margin-top: 5px;
+    }
+    &__strip {
+        width: 60px;
+        height: 0px;
+        border: 3px solid #FFA501;
+        margin-top: 5px;
+    }
+    &__text {
+        font-weight: 700;
+        font-size: 14px;
+        color: #000000;
+        margin-top: 20px;
+    }
+    &__social {
+        margin-top: 20px;
+    }
+    &__link {
+        margin-right: 15px;
+    }
+    &__btn {
+        background: #FFA501;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        padding: 10px 20px;
+        border: none;
+        font-weight: 700;
+        font-size: 14px;
+        color: #000000;
+        margin-top: 30px;
+        width: 219px;
+        height: 45px;
+    }
+    &__form {
+        margin-top: 30px;
+        display: grid;
+        grid-template: 45px 190px 45px / repeat(2, 280px);
+        justify-content: space-between;
+        row-gap: 30px;
+    }
+    &__triggers {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+    &__policy {
+        font-size: 12px;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        margin-top: 23px;
+        input {
+            margin-right: 10px;
+        }
+    }
+    &__input {
+        position: relative;
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 5px 20px;
+            font-weight: 500;
+            font-size: 12px;
+            color: #000000;
+        }
+        label {
+            display: block;
+            position: absolute;
+            background-color: #fff;
+            height: 18px;
+            padding: 0 8px;
+            font-size: 12px;
+            margin-bottom: 0;
+            top: -9px;
+            left: 12px;
+        }
+    }
+    &__textarea {
+        position: relative;
+        grid-column: 1 / 3;
+        textarea {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            padding: 5px 20px;
+            font-size: 12px;
+        }
+        label {
+            display: block;
+            position: absolute;
+            background-color: #fff;
+            height: 18px;
+            padding: 0 8px;
+            font-size: 12px;
+            margin-bottom: 0;
+            top: -9px;
+            left: 12px;
+        }
+    }
+}
